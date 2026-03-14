@@ -16,7 +16,7 @@
     body{font-family:'Lato',sans-serif;color:var(--white);min-height:100vh;overflow-x:hidden;position:relative}
 
     .bg-slide{position:fixed;inset:0;z-index:0;background-size:cover;background-position:center;will-change:opacity}
-    .bg-slide.s1 { background-image: url('images/dakar.jpg'); animation: slide1 16s ease-in-out infinite; }
+    .bg-slide.s1 { background-image: url('images/thies.jpg'); animation: slide1 16s ease-in-out infinite; }
     .bg-slide.s2 { background-image: url('images/uam.jpg');   animation: slide2 16s ease-in-out infinite; }
     @keyframes slide1 {
     0%, 37.5% { opacity: 1; }
@@ -122,18 +122,24 @@
     @keyframes spin{to{transform:rotate(360deg)}}
 
     .footer {
-    position: relative; z-index: 2;
-    text-align: center; padding: 20px;
-    font-size: .85rem;
-    font-family: 'Cinzel', serif;
-    letter-spacing: 2px;
-    color: #4fc3f7;
-    text-shadow: 0 0 18px rgba(79,195,247,0.6), 0 2px 8px rgba(0,0,0,0.8);
-    @keyframes blueGlow {
-    0%,100% { text-shadow: 0 0 12px rgba(79,195,247,0.4), 0 2px 8px rgba(0,0,0,0.8); }
-    50%     { text-shadow: 0 0 28px rgba(79,195,247,0.85), 0 2px 8px rgba(0,0,0,0.8); }
+      position: relative; z-index: 2;
+      text-align: center; padding: 24px 20px;
     }
-    @media(max-width:520px){.card{padding:28px 22px}.hero-title{font-size:1.6rem}.modal{padding:28px 20px}}
+    .footer-inner {
+      display: inline-block;
+      background: rgba(10, 15, 40, 0.75);
+      border: 1px solid rgba(232,185,49,0.35);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-radius: 99px;
+      padding: 8px 28px;
+      font-family: 'Cinzel', serif;
+      font-size: .82rem;
+      letter-spacing: 2px;
+      color: var(--gold);
+      text-shadow: 0 0 12px rgba(232,185,49,0.5);
+      animation: glowPulse 3s ease-in-out infinite;
+    }
   </style>
 </head>
 <body>
@@ -143,10 +149,10 @@
 
   <main class="page">
     <div class="logo-wrap">
-      <img src="images/logo_amicale.jpg" alt="Logo Amicale" onerror="this.style.display='none'" />
+      <img src="images/logo_amicale.png" alt="Logo Amicale" onerror="this.style.display='none'" />
     </div>
     <h1 class="hero-title">Caravane Universitaire</h1>
-    <p class="hero-sub">Réservation de Places · UAM → Patte d'oie, Camberene, Liberte 6</p>
+    <p class="hero-sub">Réservation de Places · UAM → Thies</p>
 
     <div class="card">
       <div class="seat-info">
@@ -176,7 +182,9 @@
     </div>
   </main>
 
-  <footer class="footer">✦ © By Anonymous ✦</footer>
+  <footer class="footer">
+    <div class="footer-inner">✦ © By Anonymous ✦</div>
+  </footer>
 
   <!-- ══ MODAL ══════════════════════════════════════════ -->
   <div class="modal-backdrop" id="waveModal">
